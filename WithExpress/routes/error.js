@@ -3,8 +3,8 @@ const express = require('express');
 const router = express.Router();
 const pathFinder = require('../helpers/path');
 
-router.get('/', (req,res,next) => {
-    res.sendFile(path.join(pathFinder, 'views', 'shop.html'));
+router.use((req,res,next)=> {
+    res.sendFile(path.join(pathFinder, 'views', 'error.html'));
 });
 
 module.exports = router;
