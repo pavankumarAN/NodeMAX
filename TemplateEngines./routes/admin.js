@@ -10,9 +10,9 @@ router.get('/add-product', (req,res,next) => {
 });
 
 router.post('/add-product', (req,res,next)=> {
-   // console.log(req.body);
+    console.log(req.body.productTitle);
     products.push({
-        productTitle: req.body.productTitle
+        productTitle :req.body.productTitle
     });
     console.log(`products ${products}`);
     res.redirect('/');
