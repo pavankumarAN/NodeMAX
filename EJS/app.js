@@ -19,7 +19,8 @@ app.use(shopRoutes);
 
 app.use((req, res, next) => {
     res.render('404', {
-        pageTitle : 'Error'
+        pageTitle : 'Error',
+        path : ''
     });
     //res.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
 });
