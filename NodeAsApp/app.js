@@ -21,14 +21,14 @@ app.get('/', (req,res,next) => {
 app.get('/users', (req,res,next) => {
     res.render('users', {
         pageTitle : 'Add users' ,
-        users, 
+        users:users, 
         hasUsers : users.length > 0
     });
 });
 
 app.post('/add-user', (req,res,next) => {
     users.push({name : req.body.username});
-    res.render('/users');
+    res.render('users');
 });
 
-app.listen(3001);
+app.listen(3022);
