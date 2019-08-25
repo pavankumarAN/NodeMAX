@@ -3,7 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 
-app.set('view engine', 'pug');
+app.set('view engine', 'ejs');
 app.set('views', 'views');
 
 const adminRoutes = require('./routes/admin');
@@ -17,6 +17,6 @@ app.use('/admin',adminRoutes.routes);
 app.use(shopRoutes);
 app.use(errorRoutes);
 
-app.listen(3000, () => {
-    console.log("Server runs at 3000 port");
+app.listen(3001, () => {
+    console.log("Server runs at 3001 port");
 })
